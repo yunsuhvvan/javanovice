@@ -12,8 +12,8 @@ public class Ex_05_08 {
 		for(int i=0; i < answer.length;i++) {
 			
 			;
-			//counter[i] = answer[i];    // answer 배열 값을 counter에게 전달(?)
-			counter[answer[i]-1]++;   //    
+			//counter[i] = answer[i]++;    // answer 배열 값을 counter에게 전달(?) 오답
+			counter[answer[i]-1]++;   //     counter[1-1]++ , 
 		}
 		for(int i=0; i < counter.length;i++) {
 			System.out.print(counter[i]);
@@ -28,11 +28,14 @@ public class Ex_05_08 {
 	}
 
 //   counter[answer[i]-1]++ 에서 뭘 넣어야 할 지 몰라서 시간이 많이 소요 됨
-//  배열 answer의 길이는 11, counter[i]은 0 1 2 3  , answer[i]의 범위는 1~4라서 -1 했음
+//  배열 answer의 길이는 11, counter[i]은 0 1 2 3  , answer[i]의 요소는 1~4라서 -1 
 // 안하면 arrayindexoutofbound..될 것이라 생각..
 
 
-
+//counter[0]  counter[0] counter[0]        
+//counter[3] counter[3]  counter[3] counter[3] 
+//counter[2] counter[2]
+//counter[1] counter[1] 
 
 
 
