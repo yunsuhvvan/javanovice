@@ -26,8 +26,8 @@ public class Ex_05_11 {
 			for(int j=0; j < score[i].length;j++) {
 				
 				result[i][j] = score[i][j];
-				result[i][3] += result[i][j];  // 100 + 100 + 100...50+50+50..
-				result[result.length-1][j] +=result[i][j];    // 100+20+30+40+50...
+				result[i][result[0].length-1] += result[i][j];  // 100 + 100 + 100...50+50+50..  j의 값을 늘어난 배열에 더함
+				result[result.length-1][j] +=result[i][j];    // 100+20+30+40+50...   반대로도 더해준다
 				result[result.length-1][result[0].length-1] += result[i][j];
 			
 				//result[6-1] --> result[5] --> 0,1,2,3,4,5 
