@@ -36,10 +36,14 @@ public class Student {
 	
 	float getAverage() {
 		
-		float i = (float)(getTotal()*100 /3 )/100;   //78.66
-		return Math.round(i);
+		return (float)(getTotal()*100 /3 )/100;   //78.66
+		//return (int)(getTotal() / 3f * 10 + 0.5f) / 10f;  //78.7
 		
-//		return  (float)(getTotal()*100/3 )/1000; 
+		
+		
+		
+		//  답을 맞추진 못했지만 실수를 더해서 값을 찾을 수 있다는 방법을 알게 되었다
+	
 		 
 		
 		
