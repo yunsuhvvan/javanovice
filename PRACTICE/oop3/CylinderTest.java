@@ -5,11 +5,11 @@ class Cylinder {
 	 int radius;
 	 int height;
 	 
-	  public Cylinder() {
+	  public Cylinder() {  // 인자가 없는 생성자로 만들었을때 아래 생성자를 호출하고 0,0으로 초기화
 		  this(0,0);
 	  }
 	 
-	  public Cylinder(int radius, int height) {
+	  public Cylinder(int radius, int height) {  
 		this.radius = radius;
 		this.height = height;
 	}
@@ -24,7 +24,7 @@ public double getVolume() {
 
 public double getArea() {
 	
-    return (radius * radius * Math.PI *2) + ((radius*2) *Math.PI *height);
+    return (radius * radius * Math.PI *2) + ((radius*2) *Math.PI *height);  
 	
 }
 	 
