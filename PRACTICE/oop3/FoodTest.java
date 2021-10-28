@@ -13,7 +13,7 @@ public class FoodTest {
 	    
 	    // 모든 음식 정보 출력
 	    for (int i = 0; i < foods.length; i++) {
-	      System.out.println(foods[i].toString());
+	      System.out.println(foods[i]);   // 객체만 사용해도 toString 호출할 수 있기때문에 굳이 toString안써도 된다.
 	    }
 	  }
 	}
