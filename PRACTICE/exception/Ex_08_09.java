@@ -34,7 +34,7 @@ public UnsupportedFuctionException(String message) {
 }
 	
 public	UnsupportedFuctionException(String message, int ERR_CODE){
-		super();
+		super(message);
 		this.ERR_CODE = ERR_CODE;
 		
 	}
@@ -61,5 +61,3 @@ public class Ex_08_09 {
 }
 
 
-//추가 공부 ,설명 필요 
-//-->
