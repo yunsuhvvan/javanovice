@@ -122,8 +122,10 @@
 		 					alert('회원 등록이 실패했습니다.');
 		 				}
 					},
-					error : function(){
-						alert('입력 데이터를 확인하세요');
+					error : function(xhr){
+						if(xhr.status == 2001 || xhr.status == 2002 || xhr.status == 2003){// response.setStatus(1); 코드로 보낸 값을 받음.
+							alert(xhr.responseText);
+						}
 					}
 		 		});
 		 		
