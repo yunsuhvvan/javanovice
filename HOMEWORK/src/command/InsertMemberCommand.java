@@ -65,7 +65,7 @@ public class InsertMemberCommand implements MemberCommand {
 			response.setContentType("text/plain; charset=utf-8");
 			
 			PrintWriter out = response.getWriter();
-			out.println("알 수 없는 예외가 발생했습니다.");
+			out.println("입력 데이터를 확인하세요.");
 			
 			response.setStatus(2003);
 

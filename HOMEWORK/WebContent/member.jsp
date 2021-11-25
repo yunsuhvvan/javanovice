@@ -97,9 +97,6 @@
 		 			alert('나이는 0~100 사이만 입력 가능합니다.');
 		 			$('#age').focus();
 		 			return;
-		 		} else if($('#no').val() == $('#hidden_no').val()){
-		 			alert('동일한 회원번호는 입력할 수 없습니다.');
-		 			return;
 		 		} else if(regbirth.test($('#birthday').val())==false ){
 		 			alert('입력 데이터를 확인하세요');
 		 			$('#birthday').focus();
@@ -123,7 +120,7 @@
 		 				}
 					},
 					error : function(xhr){
-						if(xhr.status == 2001 || xhr.status == 2002 || xhr.status == 2003){// response.setStatus(1); 코드로 보낸 값을 받음.
+						if(xhr.status == 2001 || xhr.status == 2002 || xhr.status == 2003){
 							alert(xhr.responseText);
 						}
 					}
@@ -136,10 +133,11 @@
 
 		function fnDeleteMember() {
 			$('body').on('click', '.delete_btn', function(){
-				if(confirm('회원번호 '+$(this).data('no')+' 회원의 정보를 삭제할까요?')){
+				let delete_no =  $(this).data('no');
+				if(confirm('회원번호 '+delete_no+'회원의 정보를 삭제할까요?')){
 					$.ajax({
 						url : 'deleteMember.do',
-						data : 'no='+$(this).prev().val(),
+						data : 'no='+delete_no,
 						dataType : 'json',
 						success : function (resData) {
 							if(resData.result>0){
