@@ -67,7 +67,7 @@ public class Abstract {
 		Unit[] unit = {new Marine(), new Tank(), new Dropship()};
 		
 			for(int i=0; i < unit.length; i++) {
-				unit[i].move(200, 400);
+				unit[i].move(200, 400); 
 			}
 	}
 }
