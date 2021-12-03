@@ -66,7 +66,7 @@ class FruitBoxEx4 {
 		Collections.sort(grapeBox.getList(), new FruitComp());
 		System.out.println(appleBox);
 		System.out.println(grapeBox);
-	}  // main
+	}  // main 
 }
 
 class FruitBox4<T extends Fruit4> extends Box4<T> {}
